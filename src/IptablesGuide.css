@@ -1,9 +1,22 @@
 /* src/IptablesGuide.css */
 
-.guide-container {
-    margin:0 auto;
+/* src/IptablesGuide.css */
+
+/* Optional: Customize card shadows and borders */
+.card {
+  border-radius: 8px;
 }
-.dabba{
-  margin: auto;
+
+.card-title {
+  color: #007bff; /* Bootstrap primary color */
+  margin-bottom: 20px;
 }
-  
+
+.card-subtitle {
+  color: #28a745; /* Bootstrap success color */
+  margin-bottom: 15px;
+}
+
+.list-group-item strong {
+  color: #343a40; /* Darker text for emphasis */
+}
