@@ -8,8 +8,7 @@ import { coy } from 'react-syntax-highlighter/dist/esm/styles/prism';
 const IptablesGuide = () => {
   return (
   <>
-
-      <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div className="container-fluid">
           <a className="navbar-brand" href="#home">
             IPTABLES Guide
@@ -77,7 +76,7 @@ const IptablesGuide = () => {
         </div>
       </nav>
 
-      <div className="guide-container bg-light">
+      <div className="guide-container bg-light mt-5">
         <div className="container">
           <div id="home" className="text-center my-5">
             <h1 className="display-4">IPTABLES GUIDE</h1>
