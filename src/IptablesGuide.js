@@ -287,6 +287,8 @@ const IptablesGuide = () => {
                 <p className="card-text">
                   This rule redirects outgoing HTTPS traffic from the host device destined for <code>1.1.1.1:443</code> to <code>8.8.8.8:443</code>.
                 </p>
+              </div>
+            </div?
 
                 <h5 className="card-title">For Devices Connected to the Host Device (Traffic Routed Through Host):</h5>
                 <SyntaxHighlighter language="bash" style={coy} className="mb-3">
