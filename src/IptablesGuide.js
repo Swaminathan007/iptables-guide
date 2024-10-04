@@ -7,8 +7,9 @@ import { coy } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
 const IptablesGuide = () => {
   return (
-  <>
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <>
+      {/* Navbar */}
+      <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div className="container-fluid">
           <a className="navbar-brand" href="#home">
             IPTABLES Guide
@@ -76,13 +77,16 @@ const IptablesGuide = () => {
         </div>
       </nav>
 
+      {/* Main Content */}
       <div className="guide-container bg-light mt-5">
         <div className="container">
+          {/* Header */}
           <div id="home" className="text-center my-5">
             <h1 className="display-4">IPTABLES GUIDE</h1>
             <p className="lead">Comprehensive guide to managing iptables on your system.</p>
           </div>
 
+          {/* Installation Section */}
           <section id="installation">
             <h2 className="section-title">Installation</h2>
             <div className="card mb-4">
@@ -98,6 +102,7 @@ const IptablesGuide = () => {
             </div>
           </section>
 
+          {/* Default Properties Section */}
           <section id="default-properties">
             <h2 className="section-title">Default Properties</h2>
             <div className="card mb-4">
@@ -140,6 +145,7 @@ const IptablesGuide = () => {
             </div>
           </section>
 
+          {/* Rules Section */}
           <section id="rules">
             <h2 className="section-title">Rules</h2>
             <div className="card mb-4">
@@ -175,6 +181,7 @@ const IptablesGuide = () => {
             </div>
           </section>
 
+          {/* Writing Rules Section */}
           <section id="writing-rules">
             <h2 className="section-title">Writing Rules to iptables</h2>
             <div className="card mb-4">
@@ -201,6 +208,7 @@ const IptablesGuide = () => {
             </div>
           </section>
 
+          {/* Common Options Section */}
           <section id="common-options">
             <h2 className="section-title">Common Options</h2>
             <div className="card mb-4">
@@ -229,6 +237,7 @@ const IptablesGuide = () => {
             </div>
           </section>
 
+          {/* Allow Incoming Connections for HTTP Section */}
           <section id="allow-http">
             <h2 className="section-title">Allow Incoming Connections for HTTP</h2>
             <div className="card mb-4">
@@ -242,6 +251,7 @@ const IptablesGuide = () => {
             </div>
           </section>
 
+          {/* Block Connections to a Particular Website Section */}
           <section id="block-connections">
             <h2 className="section-title">Block Connections to a Particular Website</h2>
             <div className="card mb-4">
@@ -261,24 +271,28 @@ const IptablesGuide = () => {
             </div>
           </section>
 
+          {/* Redirect Traffic to Different IP Section */}
           <section id="redirect-traffic">
             <h2 className="section-title">Redirect Traffic to a Different IP</h2>
 
+            {/* First Card: Allow Redirection */}
             <div className="card mb-4">
               <div className="card-body">
-                <h5 className="card-title">For the Host Device Alone:</h5>
+                <h5 className="card-title">Allow Redirection</h5>
                 <SyntaxHighlighter language="bash" style={coy} className="mb-3">
-                  {`Allow redirection:
-                    sudo nano /etc/sysctl.conf
-                    Add the following:
-                    	net.ipv4.ip_forward = 1
-                    Save and exit
-                    sudo sysctl -p
-                    `}
+                  {`sudo nano /etc/sysctl.conf
+Add the following:
+    net.ipv4.ip_forward = 1
+Save and exit
+sudo sysctl -p`}
                 </SyntaxHighlighter>
-                </div>
+                <p className="card-text">
+                  These commands enable IP forwarding on your system, allowing traffic to be routed between interfaces.
+                </p>
+              </div>
             </div>
-            
+
+            {/* Second Card: For the Host Device Alone */}
             <div className="card mb-4">
               <div className="card-body">
                 <h5 className="card-title">For the Host Device Alone:</h5>
@@ -291,6 +305,9 @@ const IptablesGuide = () => {
               </div>
             </div>
 
+            {/* Third Card: For Devices Connected to the Host Device */}
+            <div className="card mb-4">
+              <div className="card-body">
                 <h5 className="card-title">For Devices Connected to the Host Device (Traffic Routed Through Host):</h5>
                 <SyntaxHighlighter language="bash" style={coy} className="mb-3">
                   {`sudo iptables -t nat -A PREROUTING -p tcp -d 1.1.1.1 --dport 443 -j DNAT --to-destination 8.8.8.8:443`}
@@ -308,6 +325,7 @@ const IptablesGuide = () => {
             </div>
           </section>
 
+          {/* Save iptables Rules Section */}
           <section id="save-rules">
             <h2 className="section-title">Save iptables Rules</h2>
             <div className="card mb-4">
@@ -325,6 +343,7 @@ const IptablesGuide = () => {
             </div>
           </section>
 
+          {/* Restart iptables Section */}
           <section id="restart-iptables">
             <h2 className="section-title">Restart iptables</h2>
             <div className="card mb-4">
@@ -343,6 +362,8 @@ const IptablesGuide = () => {
               </div>
             </div>
           </section>
+
+          {/* Summary Section */}
           <section id="summary">
             <h2 className="section-title">Summary</h2>
             <div className="card mb-4">
