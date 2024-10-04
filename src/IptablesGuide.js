@@ -263,6 +263,21 @@ const IptablesGuide = () => {
 
           <section id="redirect-traffic">
             <h2 className="section-title">Redirect Traffic to a Different IP</h2>
+
+            <div className="card mb-4">
+              <div className="card-body">
+                <h5 className="card-title">For the Host Device Alone:</h5>
+                <SyntaxHighlighter language="bash" style={coy} className="mb-3">
+                  {`Allow redirection:
+                    sudo nano /etc/sysctl.conf
+                    Add the following:
+                    	net.ipv4.ip_forward = 1
+                    Save and exit
+                    sudo sysctl -p
+                    `}
+                </SyntaxHighlighter>
+            </div>
+            
             <div className="card mb-4">
               <div className="card-body">
                 <h5 className="card-title">For the Host Device Alone:</h5>
