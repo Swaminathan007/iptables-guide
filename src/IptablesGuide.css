@@ -1,22 +1,32 @@
-/* src/IptablesGuide.css */
+/* IptablesGuide.css */
 
-/* src/IptablesGuide.css */
+.guide-container {
+  padding-top: 80px; /* Adjusting for the fixed navbar */
+}
 
-/* Optional: Customize card shadows and borders */
+.section-title {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 5px;
+}
+
 .card {
-  border-radius: 8px;
+  border: 1px solid #dee2e6;
 }
 
 .card-title {
-  color: #007bff; /* Bootstrap primary color */
-  margin-bottom: 20px;
+  font-size: 1.25rem;
 }
 
-.card-subtitle {
-  color: #28a745; /* Bootstrap success color */
-  margin-bottom: 15px;
+.copy-icon {
+  cursor: pointer;
+  margin-left: 5px;
+  color: #007bff;
+  transition: color 0.3s;
 }
 
-.list-group-item strong {
-  color: #343a40; /* Darker text for emphasis */
+.copy-icon:hover {
+  color: #0056b3;
 }
